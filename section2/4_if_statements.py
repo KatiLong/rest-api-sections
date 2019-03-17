@@ -17,15 +17,26 @@ if user_name in my_known_people:
 #### Exercise
 
 def who_do_you_know():
-    names = input("Enter the names of people you know, separated by commas: ")
-    names_list = names.split(",")
+    # Ask the user for a list of people they know
+    friends = input("Enter the names of people you know, separated by commas: ")
+    # Split the string into a list
+    names_list = friends.split(',')
+    # Return that list   
     return names_list
+
+    # names = input("Enter the names of people you know, separated by commas: ")
+    # names_list = names.split(",")
+    # return names_list
 
 def ask_user():
     # Ask user for their name
+    name = input("What is your name?")
     # See if their name is in list of people
-    # Print something if it is
+    if name in who_do_you_know():
+         # Print something if it is
+        print("Hello {}, you're on the list!".format(name))
+   
 
-    user_name = input("Enter your name: ")
-    if user_name in who_do_you_know():
-        print("Hello {}, I know you!".format(user_name))
+    # user_name = input("Enter your name: ")
+    # if user_name in who_do_you_know():
+    #     print("Hello {}, I know you!".format(user_name))
